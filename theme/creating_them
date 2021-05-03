@@ -1,0 +1,30 @@
+go to metarial ui style section there you will get its installtion it uses jss mean css and javascript compile file less 15kb
+
+npm install @material-ui/styles
+
+then go to customization/overview.overview
+
+then import it in app.js theme setup
+
+import { ThemeProvider } from '@material-ui/core/styles';
+
+now in app.js remove the  div class element and replace it with theme provider beacuse we want theme now 
+function App() {
+  return (
+    <ThemeProvider  theme={theme}>
+  <Header/>
+</ThemeProvider>
+  );
+}
+
+
+now create a theme.js in ui go to customization theme overview if we scroll down we will see multitheme option
+
+import { createMuiTheme } from '@material-ui/core/styles';
+
+export default createMuiTheme({});
+
+now import it in app.js
+bcz it is in ./ui/theme
+
+import theme from './ui/Theme';  in app.js
