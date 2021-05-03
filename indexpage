@@ -1,0 +1,15 @@
+go to the index .js file and remove the </React.StrictMode>  and leave it like this 
+ReactDOM.render(
+
+    <App />
+  ,
+  document.getElementById('root')
+);
+remove the code below it also 
+
+
+in app.js inside app class just write hello and see it would works inside the app return 
+
+  <div className="App">
+      Hello there!
+    </div>
