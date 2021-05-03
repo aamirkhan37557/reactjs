@@ -1,0 +1,18 @@
+import its style where you want to display it had different variants h1 to h6 and etc
+import Typography from '@material-ui/core/Typography';
+
+
+<AppBar color="secondary">
+
+<Toolbar> <Typography variant="h3">Hello </Typography> </Toolbar>
+
+</AppBar>
+
+if you want to change its defualt size go to theme.js
+typography: {
+   h3:{
+   	fontWeight:'300px'
+   }
+  },
+  
+  
