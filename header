@@ -1,0 +1,49 @@
+1.first create a folder components inside the src folder
+
+src/components/
+
+2.then copy the app.js file and paste it inside the component folder after doing this change the app.js path in index.js 
+import App from './components/App';
+
+
+3.now create new file inside ui and name it header.js
+
+and then inside ui/header.js 
+
+now select the navigtion menu for it in meterial design components and for it import thing go to app api scrolling down the app page in header
+
+import react from 'react'
+app bar api 
+tool bar api
+export default function name(){ return(here design app and toolbar) }note appbar is used for app bar and toolbar is used to make it horizental mean make menu item horizetal if 
+we dont use it it will make it verticall
+
+
+//import react
+import React from 'react';
+// from api imprt app bar bar
+import { AppBar } from '@material-ui/core';
+//import  tools bar
+import { Toolbar } from '@material-ui/core';
+
+//
+export default function Header(props) {
+	return(
+
+<AppBar>
+<Toolbar> hello </Toolbar>
+		 </AppBar>
+
+
+		)
+	
+}//end of the file 
+
+now go to app.js first import it header and then run the header
+
+import App from './components/App';
+inside the app function
+<div className="App">
+     <Header/>
+    </div>
+
