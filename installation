@@ -1,0 +1,34 @@
+1.install node first
+
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+it will run its in browser
+or 
+http://localhost:3000/
+
+2.install react router
+
+npm install --save react-router-dom
+
+3.install meteral design if you want
+
+npm install @material-ui/core
+
+
+4. now go to the src folder/app.js
+
+at the top 
+
+import React from 'react';
+import { Button } from '@material-ui/core';
+
+in function add these and run 
+ <Button class="variant">click me </Button>
+
+
+
+
