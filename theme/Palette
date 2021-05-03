@@ -1,0 +1,40 @@
+Palette colors  is common,  primary ,secondary ,error ,warning ,info ,success 
+
+to override its cusmtom
+palette.primary
+palette.secondary
+palette.error
+palette.warning
+palette.info
+palette.success
+
+in theme.js 
+we will create export default createMuiTheme({});  inside it we will write
+
+palette: { } inside we will pass it color common:{}  , primary:{main:' '} etc
+
+
+export default createMuiTheme({
+
+palette:{
+common:{
+	blue:'#1976d2',
+	orange:'#f57c00'
+},
+ primary: {
+      main: '#4791db',
+    },
+    secondary: {
+      // This is green.A700 as hex.
+      main: '#11cb5f',
+    },
+
+}
+
+
+
+});
+to get the color go to the app var and cahnge its color like in header.js etc
+<AppBar color="secondary">
+<Toolbar> hello </Toolbar>
+</AppBar>
