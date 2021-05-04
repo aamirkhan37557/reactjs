@@ -1,0 +1,43 @@
+1.creating Navigation  create a file in component/ui/navigationbar.js
+//import react
+import React from 'react';
+// from api imprt app bar bar
+import { AppBar } from '@material-ui/core';
+//import  tools bar
+import { Toolbar } from '@material-ui/core';
+//import style for inline styling
+import { makeStyles } from '@material-ui/core/styles';
+
+// create the navigation and pass the probs to it 
+export default function Navigationbar(props){
+//now ehat will it return app bar return ()
+return(
+
+<AppBar><Toolbar> hello123  </Toolbar> </AppBar>
+	)
+
+}
+
+
+2.now go to app.js and import the theme as well as the navigation  and creare theme i ui/theme.js
+
+import { ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import Navigationbar from '../components/ui/navigationbar';
+import theme from './ui/Theme';
+
+
+3.in retrun function() call it 
+
+ <ThemeProvider theme={theme}>
+  <Navigationbar />
+</ThemeProvider>
+
+***********************************************************************************************
+4.Now adding logo  create a folder in src and copy the image there 
+import logo   from '../../assets/logo.svg';
+<AppBar><Toolbar> <img alt="no image found"  src={logo}   />  </Toolbar> </AppBar>
+
+5.now we will adjust the image 
+
+
