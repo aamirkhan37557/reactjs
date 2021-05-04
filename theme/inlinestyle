@@ -1,0 +1,80 @@
+steps 5
+1. import its style in page where you want inline style
+import { makeStyles } from '@material-ui/core/styles';
+2.above export default in the where you want style create a variabel ans store the style in it 
+const usestyle = makeStyles( theme => ({}));
+3.create in line desig it 
+4.//now use the class name and store it in variable inside the exprt default and above retrun  
+	const classes = usestyle()
+ 5. access it by name
+ <div  className={classes.ToolbarMargin} />
+<button  className={classes.root}> click me  </button>
+
+********************************************************************************************************************
+
+we will not use - like css margin-top  it will be margintop:  and moreover char will be also store in string like color:"white" 
+
+on the page where you want to style not o theme.js
+import { makeStyles } from '@material-ui/core/styles';
+
+
+now as its uses hooks now we will use hooks above the expoert defalut function name 
+
+we weill create a vraible and use its style in it 
+
+// now we will create a varaibel and use makestyle in it
+// here we will use theme mean will target theme for inine style in theis query
+const usestyle = makeStyles( theme => ({}));
+
+now we will change the app bar in theme
+
+
+const usestyle = makeStyles( theme => ({
+//create a class name it can be anything like toolbarname asdf or anythinf
+ToolbarMargin:{
+...theme.mixins.toolbar
+
+}
+
+}));
+
+
+
+export default function Header(props) {
+
+	//now use the class name and store it in variable
+	const classes = usestyle()
+
+	return(
+		
+<React.Fragment>
+<AppBar color="secondary">
+
+<Toolbar> <Typography variant="h3">Hello </Typography> </Toolbar>
+
+</AppBar>
+<div  className={classes.ToolbarMargin} />
+</React.Fragment>
+
+		)
+		
+	
+}
+
+
+
+// it hide tect etc benaeth its menubar for that we use margin tool bar to check it out in const use style
+ root: {
+    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+  },
+  
+  as we decalered the name in hook so 
+  
+  <button  className={classes.root}> click me  </button>
+
