@@ -1,0 +1,64 @@
+1.first import it 
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+
+2.first create it use state and make it null
+ const [anchorEl, setAnchorEl] = React.useState(null);
+
+//this will till the javascript and where to open on the screen mean where it is cliked  
+ const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+//this is to close the menu 
+   const handleClose = () => {
+    setAnchorEl(null);
+  };
+  
+  
+  
+  
+  
+  
+3.add the below code where you want to dropdown menu either it is tab or mouse over in my case it is tab
+ aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}
+ 
+  <Tab label="Services"    aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} />
+  
+  4.Now open the menu item 
+   <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
+      
+      
+      
+      all this code do it on mouse click if we want to do it on omuse over and mouse leaver 
+      then change onclick to   onMouseOver={handleClick}
+       <Tab label="Services"    aria-controls="simple-menu" aria-haspopup="true" onMouseOver={handleClick} />
+       
+       
+       
+       and for mouse leave we will need the property menulist props in menu 
+        MenuListProps ={{onMouseLeave: handleClose}}
+          <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        MenuListProps ={{onMouseLeave: handleClose}}
+      >
+ 
+
+
+
+
