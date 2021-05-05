@@ -1,0 +1,60 @@
+                                    first in app.js
+                                    
+ import { BrowserRouter , Route, Switch} from 'react-router-dom';
+
+then use it sample is 
+
+  <BrowserRouter>
+                      // is to display menu it sohud be in broweser history 
+                      <Header />]
+  <Switch>
+  <Route exact  path="/"   component =  {()=><div>  this is home</div>  }/>
+ </Switch>
+
+ </BrowserRouter>            
+ 
+ **************************************************************8
+ 
+     <BrowserRouter>
+  <Header />
+
+
+
+  <Switch>
+  <Route exact  path="/"   component =  {()=><div>  this is home</div>  }/>
+   <Route exact  path="/Services"   component =  {()=><div>  this is serivces</div>  }/>
+    <Route exact  path="/Revolution"   component =  {()=><div>  this is revolution</div>  }/>
+     <Route exact  path="/About_us"   component =  {()=><div>  this is about us </div>  }/>
+      <Route exact  path="/Contact_us"   component =  {()=><div>  this is caontact us </div>  }/>
+    
+ </Switch>
+     *********************************************************                  
+                       
+                       
+                             2nd in desired page like header.js
+ 
+ import { Link } from 'react-router-dom';
+
+now use to the now we will tell the tab  not taps not your are linked with component and  to 
+
+ component={Link} to="/" 
+ 
+ ****************************************************
+ 
+<Tabs className={classes.margintabs} value={currentvalue} onChange={handelchange}  classes={ {indicator: classes.styledIndicator} }>
+          <Tab label="Home"   component={Link} to="/" />
+          <Tab label="Services"  component={Link} to="/Services"  />
+          <Tab label="Revolution"   component={Link} to="/Revolution"  />
+            <Tab label="About Us"   component={Link} to="/About_us" />
+              <Tab label="Contact Us"  component={Link} to="/Contact_us"  />
+        </Tabs>
+        *********************************************************
+              
+              
+              
+              
+              
+              
+              
+              
+              
