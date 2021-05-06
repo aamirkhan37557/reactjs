@@ -1,0 +1,54 @@
+1. realtive unit     em,%,vh,vw,
+
+2. media quireies
+
+3.grid system
+4.testing,testing,testing
+
+making header responsivenes  metarial ui/guides/responsive ui
+
+first we will make the design using media query hooks
+
+1.         import useMediaQuery from '@material-ui/core/useMediaQuery';
+          import { useTheme  } from '@material-ui/core/styles';
+          
+ 2. now store it  in the const inside the export default and outside the return this theme will store the value of usetheme import
+  
+  const theme = useTheme();
+  
+  
+ 3.now create a const to make a design dynamic  like       const tabs( <React.Fragment>     </React.Fragment>) outside the return and paste all the tabs item 
+  const tabs =         ( <React.Fragment>     </React.Fragment>)
+  as shown in the link
+  https://github.com/zreecespieces/material-ui-course-create-react-app/blob/master/src/components/ui/Header.js   213
+  
+  
+ 4. now it will be gone for displaying it we will use media query outside return we will create a const a store our media query in it
+ 
+ 
+ 
+    const matches = useMediaQuery(theme.breakpoints.down("md"));
+    
+    
+ 5.now we will display it in its position
+     {matches ? null : tabs}
+     
+     now if notice then the logo is still loger now we will create a breakpoint forr logo for md screen in makestyle mean inline style
+     
+  logo:{
+ height: "7em",
+   [theme.breakpoints.down("md")]: {
+      height: "6em"
+    },
+     [theme.breakpoints.down("xs")]: {
+      height: "5.5em"
+    }
+},
+
+
+
+
+     
+    
+    
+  
