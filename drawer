@@ -1,0 +1,64 @@
+import swiple drawers
+import { SwipeableDrawer } from '@material-ui/core';
+ note for menu icon intall it npm install -s @material-ui/icons 
+import MenuIcon from "@material-ui/icons/Menu";
+import IconButton from "@material-ui/core/IconButton";
+
+
+
+
+inside export defalut our side return copy and paste the line to check eith eit is in ios or not
+
+const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+create a hook for it 
+ const [drawercurrentstate, drawernewstate] = React.useState(false);
+ 
+ 
+ now create a const a store it values there out side return 
+ const drawer =( <React.Fragment>   </React.Fragment>    );   inside we will create the swiable query for onlick open and close
+ 
+ inside the  <SwipeableDrawer   disableBackdropTransition={!iOS} disableDiscovery={iOS} > we had on close and open function to open and close it 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ const drawer =( 
+<React.Fragment>
+
+ <SwipeableDrawer disableBackdropTransition={!iOS} disableDiscovery={iOS} 
+open={drawercurrentstate}  onClose={() => drawernewstate(false)}   onOpen={() => drawernewstate(true)}> 
+example
+
+  </SwipeableDrawer>
+
+    <IconButton  onClick={() => drawernewstate(!drawercurrentstate)} >
+   
+        <MenuIcon  />
+      </IconButton>
+
+</React.Fragment>
+
+     );
+     
+     
+     //now call it in the tab
+        {matches ? drawer : tabs}
+        
+        
+        to float it to right make it  custom desgin of marginLeft:auto
+        
+     
+     
+
+  
+
+
+ 
+ 
+ 
+ 
+
