@@ -37,6 +37,8 @@ Tab:{
    TextColor:"red",
    backgroundColor:"red",
    borderRadius:'5em',
+   
+   note for hovering using the hover function inside the function like tabs:{    '&:hover':{ backgroundColor:"yellow",}     }
    '&:hover':{
     backgroundColor:"yellow",
     color:'pink', 
