@@ -1,6 +1,9 @@
-import swiple drawers
-import { SwipeableDrawer } from '@material-ui/core';
- note for menu icon intall it npm install -s @material-ui/icons 
+
+ note for menu icon intall it
+ 
+ npm install -s @material-ui/icons 
+ 
+ import { SwipeableDrawer } from '@material-ui/core';
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 
