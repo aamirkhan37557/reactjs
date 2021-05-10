@@ -1,0 +1,73 @@
+
+Now in case if we want to change the backgournd of the menu which is actually Paper in Menu api and if we want to change the css or override the css then we will use the
+classes instead of clasName and then {{ }}   then css role name : classes.customstylename  
+
+
+classes={{paper:classes.menu}}
+
+***************************************************************************************************************8
+1.import menu and menu item for dropdown
+
+    import Menu from '@material-ui/core/Menu';
+     import MenuItem from '@material-ui/core/MenuItem';
+     
+ 2.now we will use usestate to open and close menu
+ note    anchorEl    function that returns it. It's used to set the position of the menu  and  is not bulidin i think and import  import React ,{ useState}  from 'react';
+                        
+             
+                            const [anchorEl, setAnchorEl] = React.useState(null);
+                            
+                            
+3.TO OPEN AND CLOSE THE MENU USE THE FOLLOWING FUNCTION 
+//THIS WILL THELL WHERE TO TO OPE THE MENU EVENT IS TAKING LOOK AFTER OF IT 
+                       
+                                         const handleClick = (event) => {
+                                              setAnchorEl(event.currentTarget);
+                                            };
+
+
+THIS IS  will close the menu 
+                                                           const handleClose = () => {
+                                                                                     
+                                                              setAnchorEl(null);
+                                                                                      };
+                                                                                      
+                                                                                      
+  4.now go to the position or tabs where you want to open the menu on temparey bases write this code the aria-controls="simple-menu" is the id in this case which we will get in 
+  the menu opening tag  
+  
+             aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}
+             
+ 
+ 5.now create the meni and menu item 
+   <Menu
+   //this is the iid
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        
+        //anchorEl bu default is false this id will set it true and open the menu 
+        open={Boolean(anchorEl)}
+        //this will close the menu 
+        onClose={handleClose}
+      >
+      
+6.now create the menu item and close it one cliking it 
+
+  <MenuItem onClick={handleClose}>Profile</MenuItem>
+  
+  7 .now in case if we want to close the menu item for that we will use the MenuList props which we take the javascript object OnMouseLeave inside the main Menu
+  
+                                                         MenuListProps={{onMouseLeave:handleClose}}
+   
+   <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        MenuListProps={{onMouseLeave:handleClose}}
+      >
+             
+       
+       
