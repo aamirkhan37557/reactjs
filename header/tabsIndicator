@@ -1,0 +1,33 @@
+as we are using tabs the tabs provide two probs for indicator
+
+1) value => which is the indicator positon if we write value={0} it will show the idicator to o index if 1 then it will go 1 index check it on your code 
+now will change the indicator progrmatically for that we will use hooks 
+
+2) onchange=> is the 2nd prob provided by the tabs to change the positon of indicator through hooks
+
+
+   use of UseState to change the indicator position 
+   
+             a) import it outside export default 
+             import React ,{ useState}  from 'react';
+             
+             b)now inside export default use usestate
+               const[IndicatorCurrent , IndicatorNewPosition] = useState(0);
+               
+               c) now create the functon which will monitor the e(event)  where the mouse is clicked it will go there and 2nd will be its index that it will take as parameter
+               
+   const Indicator= ( e , IndicatorCurrentValue) =>{ //console.log(IndicatorCurrentValue);    IndicatorNewPosition(IndicatorCurrentValue);
+   
+   
+   now change the value into IndicatorCurrent and on change it will go indicator functon 
+   
+   <Tabs  value={IndicatorCurrentValue}  onChange={Indicator} className={classes.Tabs} variant="scrollable">
+   
+   now to change indicator color use probs  indicatorColor which is primary and secouondary 
+   
+   *******************************************************************************************************************************************************************************
+   
+   now when we click on indicator it goes where it is clicked but url or route is not changing above now we will change the url  
+      
+               
+                   
