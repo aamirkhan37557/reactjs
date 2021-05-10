@@ -1,0 +1,81 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@aamirkhan37557 
+aamirkhan37557
+/
+reactjs
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+reactjs/Header/responsive_tabs
+@aamirkhan37557
+aamirkhan37557 Rename responsive_tabs to Header/responsive_tabs
+Latest commit ab6e761 in 18 seconds
+ History
+ 1 contributor
+53 lines (20 sloc)  1.47 KB
+  
+1. realtive unit     em,%,vh,vw,
+
+2. media quireies
+
+3.grid system
+4.testing,testing,testing
+
+making header responsivenes  metarial ui/guides/responsive ui
+
+first we will make the design using media query hooks
+
+1.         import useMediaQuery from '@material-ui/core/useMediaQuery';
+          import { useTheme  } from '@material-ui/core/styles';
+          
+ 2. now store it  in the const inside the export default and outside the return this theme will store the value of usetheme import
+  
+  const theme = useTheme();
+  
+  
+ 3. now use the query that when we want to make ourtabs responsive at which level
+ down is used to takecare of all the size down the desired sizes and up is used to show all the size above the desired sizes
+ 
+    const matches = useMediaQuery(theme.breakpoints.down("md"));
+    
+    
+    
+  4.  now create a const to make a design dynamic  like       const tabs( <React.Fragment>     </React.Fragment>) outside the return and paste all the tabs item  and menu item
+  inshort copy all the thing except logo inside the toolbar
+  
+  
+  const tabs =         ( <React.Fragment>     </React.Fragment>)
+  as shown in the link
+  https://github.com/zreecespieces/material-ui-course-create-react-app/blob/master/src/components/ui/Header.js   213  
+  
+  
+  
+  
+    
+    
+ 4.now if we will go and check all the tabs will be gown in order to  to show it show it go to the desried positon and display if using javascript if function
+ 
+ 
+  {matches ? '' : tabs}
+     
+  
+
+
+
+
+     
