@@ -1,0 +1,13 @@
+go to the logo custom style      [theme.breakpoints.down("md")]: {      height: "7em"      },  for custom styling
+ 
+
+
+logo: {
+    height: "8em",
+    [theme.breakpoints.down("md")]: {
+      height: "7em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: "5.5em"
+    }
+  },
