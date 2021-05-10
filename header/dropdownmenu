@@ -5,6 +5,10 @@ classes instead of clasName and then {{ }}   then css role name : classes.custom
 
 classes={{paper:classes.menu}}
 
+menu:{
+    backgroundColor:"red",
+}
+
 ***************************************************************************************************************8
 1.import menu and menu item for dropdown
 
