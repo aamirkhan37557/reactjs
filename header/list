@@ -1,0 +1,29 @@
+ import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+
+
+
+inside swiper in case of drawer and any where you want it list open and close then for each link listitem /listitemtext will be there
+
+//to disable padding
+                                <List  disablePadding>
+                                       button and divider to remove default color text and add divider and cpomnet and link will be inside item list
+                                      <ListItem button divider component={Link}  to="/">
+                                      //inside item littext wil be
+                                  <ListItemText disableTypography> Home </ListItemText>
+                                                </ListItem>
+
+                                                <ListItem button divider component={Link}  to="/about">
+                                  <ListItemText > About </ListItemText>
+                                                </ListItem>
+
+                                      </List>
+                                      
+                                      
+       now the route is changing and the dawer remain open to close it we will close the dawer new state to false add this in each item list
+       
+       onClick={()=>drawernewstate(false) } 
+       
+       **********************************************************************************************
